@@ -1,0 +1,34 @@
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #575bf7;
+}
+#titleBox{
+    color: #fff;
+    padding: 15px;
+}
+#userBox{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    margin-left: 10vw;
+    margin-bottom: 10px;
+
+    color:#fff;
+}
+
+#titlePage{
+    display: flex;
+    margin-left: 3%;
+    color:#fff;
+}
+
+#loginBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3%;
+}

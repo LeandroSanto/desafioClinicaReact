@@ -1,0 +1,35 @@
+.sidebar{
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 15px;
+  
+    margin-bottom: 0px;
+  
+    background: #1f2b31; 
+    width: 60px;
+    height: 100vh;
+
+}
+
+.sidebar nav{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  
+    padding: 15px;
+}
+.linkMenu label{
+    display: none
+}
+.sidebar:hover{
+    width: 200px;
+}
+.sidebar nav:hover .linkMenu label{
+    display: flex;
+}
+#link{
+    text-decoration: none;
+    color:#fff;
+    padding: 2px;
+}
+  
