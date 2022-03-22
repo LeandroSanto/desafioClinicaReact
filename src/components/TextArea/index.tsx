@@ -1,4 +1,4 @@
-import './styles.css';
+import styles from './styles.module.scss';
 
 interface TextAreaProps{
     name: string;
@@ -7,7 +7,7 @@ interface TextAreaProps{
 
 export const TextArea:React.FunctionComponent<TextAreaProps> = ({name, label}) => {
     return(
-        <div className="textAreaContainer">
+        <div className={styles.textAreaContainer}>
             <label>{label}</label>
             <textarea id={name} />
         </div>

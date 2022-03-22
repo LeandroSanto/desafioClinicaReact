@@ -1,4 +1,4 @@
-import './styles.css';
+import styles from './styles.module.scss';
 
 interface InputProps{
     label: string,
@@ -8,7 +8,7 @@ interface InputProps{
 
 export const Input:React.FunctionComponent<InputProps> = ({ label, name, type }) => {
   return(
-    <div className="inputContainer">
+    <div className={styles.inputContainer}>
       <label id={name}>
         {label}
         <input type={type} id={name}/>

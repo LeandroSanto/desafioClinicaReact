@@ -1,0 +1,34 @@
+.newPatientContainer{
+  display:flex;
+  flex-direction: column;
+  
+  width: 90vw;
+
+  .textField {
+      margin-left: 15px;
+      margin-top: 15px;
+      width: 100%;
+  }
+  .formControl {
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+  .field {
+    width: 100%;
+    margin-left: 15px; 
+  }
+  .radioGroup{
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 30px;
+    
+  }
+  .footerPage {
+    position: relative;
+    justify-content: right;
+    margin-top: 15px;
+    margin-left: 30px;
+  }
+
+}

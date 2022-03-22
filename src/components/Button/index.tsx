@@ -1,5 +1,4 @@
-
-import './styles.css';
+import styles from './styles.module.scss';
 
 interface ButtonProps{
   name: string;
@@ -8,7 +7,7 @@ interface ButtonProps{
 
 export const Button:React.FunctionComponent<ButtonProps> = ({name, label}) => {
   return(
-    <div className="buttonContainer">
+    <div className={styles.buttonContainer}>
       <button id={name}><label>{label}</label></button>
     </div>      
   )

@@ -1,6 +1,6 @@
 import { Button } from "../Button";
 
-import './styles.css'
+import styles from './styles.module.scss';
 
 interface HeaderProps{
     title: string,
@@ -10,11 +10,11 @@ interface HeaderProps{
 
 export const Header:React.FunctionComponent<HeaderProps> = ({title, os, user})=>{
   return(
-    <div className="headerContainer">
-      <div id='titleBox'>
+    <div className={styles.headerContainer}>
+      <div id={styles.titleBox}>
         <h1>{title} {os}</h1> 
       </div>
-      <div id='userBox'>
+      <div id={styles.userBox}>
         {user}
         <Button name='logout' label='Sair da seção' />
       </div>

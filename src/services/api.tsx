@@ -1,5 +1,7 @@
 import axios from 'axios';
 
-export function Api(){
-    axios.create
-}
+const api = axios.create({
+    baseURL: 'http://servidorprincipal.no-ip.info:5442/api/',
+})
+
+export default api;

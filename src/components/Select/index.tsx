@@ -1,6 +1,6 @@
 import React, {SelectHTMLAttributes} from 'react';
 
-import './styles.css';
+import styles from './styles.module.scss';
 
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
     name: string;
@@ -13,7 +13,7 @@ interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
 
 const Select: React.FunctionComponent<SelectProps> = ({label, name, options, ...rest}) => {
 	return(
-		<div className="select-block">
+		<div className={styles.selectBlock}>
 			<label htmlFor={name}>{label}</label>
 			<select value="" id={name} {...rest}> 
 				<option value="" disabled selected hidden>Selecione uma opção</option>

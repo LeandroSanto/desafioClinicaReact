@@ -3,19 +3,19 @@
     --color-input-background: #F8F8FC;
 }
 
-.select-block {
+.selectBlock {
     position: relative;
 }
 
-.select-block + .select-block {
+.selectBlock + .selectBlock {
     margin-top: 1.4rem;
 }
 
-.select-block label {
+.selectBlock label {
     font-size: 1.4rem;
 }
 
-.select-block select {
+.selectBlock select {
     width: 100%;
     height: 1.8rem;
     margin-top: 0.8rem;
@@ -27,7 +27,7 @@
     font: 15px 'Rubik';
 }
 
-.select-block:focus-within::after {
+.selectBlock:focus-within::after {
     width: calc(100% - 3.2rem);
     height: 2px;
     content: '';

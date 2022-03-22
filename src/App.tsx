@@ -1,8 +1,11 @@
 import { AppRoutes } from './global/routes'
-import './global/App.css'
+import styles from './global/App.module.scss'
+
 function App() {
   return (
+    <main className={styles.container}>
       <AppRoutes />
+    </main>
   )
 }
 
