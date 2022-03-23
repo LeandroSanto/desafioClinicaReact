@@ -1,25 +1,38 @@
 .newPatientContainer{
   display:flex;
   flex-direction: column;
-  
+  position:static;
+
+  height: 100vh;  
   width: 90vw;
 
+  background: #fff;
+  border-radius: 8px;
+
   .textField {
-      margin-left: 15px;
-      margin-top: 15px;
-      width: 100%;
+    display: flex ;
+    justify-content: center;
+    align-content: center;
+
+    margin-left: 15px;
+    margin-top: 15px;
+    width: 90%;
+      
   }
   .formControl {
-    width: 100%;
-    margin-top: 15px;
+    width: 90%;
+    justify-content: center;
+    margin-top: 10px;
     margin-left: 15px;
   }
   .field {
-    width: 100%;
+    width: 90%;
+    justify-content: center;
     margin-left: 15px; 
   }
   .radioGroup{
-    width: 100%;
+    width: 90%;
+    justify-content: center;
     margin-top: 15px;
     margin-left: 30px;
     

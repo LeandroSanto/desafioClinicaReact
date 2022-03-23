@@ -1,0 +1,19 @@
+.searchClientContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;  
+  width: 90vw;
+   
+  background: #fff;
+  border-radius: 8px;
+
+  .radioGroup{
+    margin-right: 60px;
+  }
+
+  .searchField{
+    display:flex;
+    flex-direction: column;
+  } 
+}
