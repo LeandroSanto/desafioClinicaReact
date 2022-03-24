@@ -5,45 +5,57 @@ import {Radio, RadioGroup, FormControlLabel, TextField, FormControl, InputLabel,
 import api from '../../services/api';
 
 import styles from './styles.module.scss'
-import { FaOptinMonster } from 'react-icons/fa';
+
 
 
 
 export function NewPatient(){
-  const [selecEmpresas, setSelecEmpresas] = useState([]);
-  const [selecConvenios,setSelecConvenios] = useState([]);
-  const [selecEspecialidade,setSelecEspecialidade] = useState([]);
-  const [selecMedicos,setSelecMedicos] = useState();
+  const [selectEmpresas, setSelectEmpresas] = useState([]);
+  const [selectConvenios,setSelectConvenios] = useState([]);
+  const [selectEspecialidade,setSelectEspecialidade] = useState([]);
+  const [selectMedicos,setSelectMedicos] = useState();
   const [c_unidade,setC_unidade] = useState();
   const [n_unidade,setN_unidade] = useState();
 
-  async function loadSelectEmpresa(){
-    
+  async function LoadSelectEmpresa(){
     try{  
       const response = await api.get('Empresa',{
           params:{
-            c_unidade,
-            n_unidade,
+            c_unidade: Number,
+            n_unidade: String,
           }
         });
-        setSelecEmpresas(response.data)
+        setSelectEmpresas(response.data)
     } catch(err){
-      alert('Não foi possivel Carregar a Lista de Empresas')
+      alert('Não foi possivel carregar a lista de empresas')
+    }    
+  }
+
+  async function LoadSelectConvenio(){
+    try{
+      const response = await api.get(`Convenio/empresa/${c_unidade}`,{
+        params:{
+          idconvenio: Number,
+          nomeconvenio: String,
+        }
+      });
+      setSelectConvenios(response.data)
+    }catch(err){
+    
+      alert('Não foi possivel carregar a lista de empresas')
     }
-      
+
   }
-  async function loadSelectConvenio(){
+  async function LoadSelectEspecialidade(){
     
   }
-  async function loadSelectEspecialidade(){
-    
-  }
-  async function loadSelectMedicos(){
+  async function LoadSelectMedicos(){
     
   }
   
   useEffect(() => {
-    loadSelectEmpresa()
+    LoadSelectEmpresa()
+    LoadSelectConvenio()
   }),[]
 
 
@@ -78,13 +90,13 @@ export function NewPatient(){
             Local de Atendimento
           </InputLabel>
           <Select  
-            defaultValue=""
-            native
+            displayEmpty={true}
+            
             name="empresa"
             inputProps={{
               id: 'age-native-required',
             }}>
-              {selecEmpresas.map((empresas)=>(
+              {selectEmpresas.map((empresas)=>(
                 <option value={empresas.c_unidade}>{empresas.n_unidade}</option>
               ))}
           </Select>
@@ -102,15 +114,14 @@ export function NewPatient(){
             Convênio do Escolhido
           </InputLabel>
           <Select  
-            native
+            displayEmpty={true}
             name="age"
             inputProps={{
               id: 'age-native-required',
             }}>
-            <option value="" />
-            <option value={10}>Ten</option>
-            <option value={20}>Twenty</option>
-            <option value={30}>Thirty</option>
+            {selectConvenios.map((convenios)=>(
+                <option value={convenios.idconvenio}>{convenios.nomeconvenio}</option>
+              ))}
           </Select>
         </FormControl>
       </div>
@@ -143,7 +154,7 @@ export function NewPatient(){
             Especialidade do Atendimento
           </InputLabel>
           <Select  
-            native
+            displayEmpty={true}
             name="age"
             inputProps={{
               id: 'age-native-required',
@@ -167,7 +178,7 @@ export function NewPatient(){
             Médico Escolhido
           </InputLabel>
           <Select  
-            native
+            displayEmpty={true}
             name="age"
             inputProps={{
               id: 'age-native-required',

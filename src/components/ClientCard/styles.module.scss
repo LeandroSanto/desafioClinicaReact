@@ -1,0 +1,48 @@
+.clientCardContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding:15px;
+    margin-top: 5px;
+    
+    width: 90vw;
+
+    background: #fff;
+
+    border-radius: 8px;
+    
+    .field{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 5px;
+
+        p{
+            margin: 5px;
+        }
+    }
+
+    .fieldData{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding: 5px;
+
+        p{
+            margin: 5px;
+            size: 15px;
+            font-family: "Roboto";
+            font-weight: 500;
+        }
+        span{
+            color:#949090d0
+        }
+    }
+
+
+
+}
