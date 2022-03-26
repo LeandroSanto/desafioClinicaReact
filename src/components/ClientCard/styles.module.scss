@@ -6,7 +6,7 @@
     padding:15px;
     margin-top: 5px;
     
-    width: 90vw;
+    width: 75vw;
 
     background: #fff;
 
@@ -43,6 +43,37 @@
         }
     }
 
+    .textField {
+    display: flex ;
+    justify-content: center;
+    align-content: center;
+
+    margin-left: 15px;
+    margin-top: 20px;
+    width: 90%;
+    }
+    
+    .formControl {
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 15px;
+    }
+  
+    .radioGroup{
+    width: 90%;
+    justify-content: center;
+    margin-top: 15px;
+    margin-left: 30px;
+    
+    }
+    
+    .footerPage {
+    position: relative;
+    justify-content: right;
+    margin-top: 15px;
+    margin-left: 30px;
+    }
+    
 
 
 }

@@ -8,7 +8,19 @@
 
   background: #fff;
   border-radius: 8px;
-
+  
+  .newClientForm{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    height: 15vh;  
+    width: 100%;
+  
+   
+    background: #fff;
+    border-radius: 8px;
+  }
   .textField {
     display: flex ;
     justify-content: center;
